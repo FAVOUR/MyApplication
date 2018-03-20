@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "919103250278",
+    "firebase_url": "https://e-light-7d4d2.firebaseio.com",
+    "project_id": "e-light-7d4d2",
+    "storage_bucket": "e-light-7d4d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919103250278:android:028f5fd0395e1fa2",
+        "android_client_info": {
+          "package_name": "com.example.olijefavour.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919103250278-in0ca7songuobnrc80aa1sun3n5tevpa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.olijefavour.myapplication",
+            "certificate_hash": "93421c00eb37feb8d41d2bae90edd0858ab873b2"
+          }
+        },
+        {
+          "client_id": "919103250278-l3ri9njnn8bt447pkir1ggf4oqkf8usb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfbIs3ViSU1aQRZdwkZr5tkYkD2TCPMH4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "919103250278-l3ri9njnn8bt447pkir1ggf4oqkf8usb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
