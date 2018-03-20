@@ -89,10 +89,11 @@ public class SubscriberActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // User clicked on a menu option in the app bar overflow menu
         switch (item.getItemId()) {
+
+
             // Respond to a click on the "Insert dummy data" menu option
             case R.id.logout:
                 Map<String,Object> tokenMap= new HashMap<>();
-
                 tokenMap.put("token_id", FieldValue.delete());
                 mFirestore.collection("Users").document(userId).update(tokenMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -101,6 +102,8 @@ public class SubscriberActivity extends AppCompatActivity {
                         Intent loginOut= new Intent(SubscriberActivity.this,LoginActivity.class);
                         startActivity(loginOut);
                         finish();
+
+
                     }
                 });
 
