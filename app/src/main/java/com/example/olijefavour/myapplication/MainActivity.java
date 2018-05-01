@@ -18,9 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-  private RecyclerView mMainlist;
+
   private FirebaseFirestore mFirestore;
   public FirebaseAuth mAuth;
+    private RecyclerView mMainlist;
   private UsersListAdapter usersListAdapter;
 
   private List<Users> usersList;

@@ -19,6 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -83,10 +84,8 @@ public class RegistrationActivity extends AppCompatActivity {
 //                                    StorageReference userProfile=
 
                                         final String user_id = mAuth.getCurrentUser().getUid();
-                                        mAuth.getCurrentUser().getIdToken(true).addOnSuccessListener(new OnSuccessListener<GetTokenResult>() {
-                                            @Override
-                                            public void onSuccess(GetTokenResult getTokenResult) {
-                                                String tokenId=getTokenResult.getToken();
+
+                                                String tokenId= FirebaseInstanceId.getInstance().getToken();
                                         Map<String, Object> userMap = new HashMap<>();
                                         userMap.put("name", name);
                                         userMap.put("token_id",tokenId);
@@ -99,8 +98,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
                                             }
                                         });
-                                            }
-                                        });
+
 
 
 //                                updateUI(user);

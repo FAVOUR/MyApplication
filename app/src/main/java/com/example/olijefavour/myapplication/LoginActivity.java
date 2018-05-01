@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import io.fabric.sdk.android.Fabric;
 import java.util.HashMap;
@@ -81,10 +82,8 @@ public class LoginActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
 //                                Log.d(TAG, "createUserWithEmail:success");
-                                mAuth.getCurrentUser().getIdToken(true).addOnSuccessListener(new OnSuccessListener<GetTokenResult>() {
-                                    @Override
-                                    public void onSuccess(GetTokenResult getTokenResult) {
-                                        String tokenId=getTokenResult.getToken();
+
+                                        String tokenId= FirebaseInstanceId.getInstance().getToken();
                                         String getCurrentId=mAuth.getCurrentUser().getUid();
 
                                         Map<String,Object> tokenMap= new HashMap <>();
@@ -96,8 +95,7 @@ public class LoginActivity extends AppCompatActivity {
                                                 sendToSub();
                                             }
                                         });
-                                    }
-                                });
+
 
 
 //
